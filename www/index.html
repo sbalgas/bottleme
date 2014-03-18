@@ -8,7 +8,7 @@
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
 </head>
 <body>
-<div data-role="page">
+<div data-role="page" id="inBox">
 
     <div data-role="header">
         <h1>BottleMe</h1>
@@ -44,12 +44,67 @@
          <div data-role="navbar">
             <ul>
                 <li><a href="#" data-icon="edit">New</a></li>
-                <li><a href="#" data-icon="mail" class="ui-btn-active">In Box</a></li>
-                <li><a href="#" data-icon="gear">Setup</a></li>
+                <li><a href="#inBox" data-icon="mail" class="ui-btn-active">In Box</a></li>
+                <li><a href="#setup" data-icon="gear" data-transition="slidefade">Setup</a></li>
             </ul>
         </div><!-- /navbar -->
     </div><!-- /footer -->
 </div><!-- /page -->
-    
+
+
+<div data-role="page" id="setup">
+
+    <div data-role="header">
+        <h1>BottleMe</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <form action="#" method="get">
+                <h2>Here's a few form elements</h2>
+
+                <p>These are here to see if this slows down rendering.</p>
+
+                <div data-role="fieldcontain">
+                 <label for="name">Text Input:</label>
+                 <input type="text" name="name" id="name" value=""  />
+                </div>
+
+                <div data-role="fieldcontain">
+                <label for="textarea">Textarea:</label>
+                <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="slider2">Flip switch:</label>
+                    <select name="slider2" id="slider2" data-role="slider">
+                        <option value="off">Off</option>
+                        <option value="on">On</option>
+                    </select>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="slider">Slider:</label>
+                    <input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true" />
+                </div>
+
+            </form>
+
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+         <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="edit">New</a></li>
+                <li><a href="#inBox" data-icon="mail" data-transition="slidefade" data-direction="reverse">In Box</a></li>
+                <li><a href="#setup" data-icon="gear"  class="ui-btn-active">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+
 </body>
 </html>
