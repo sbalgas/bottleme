@@ -18,6 +18,41 @@
 
 </head>
 <body>
+
+<div data-role="page" id="login">
+
+    <div data-role="header">
+        <h1>Wellcome</h1>
+        <a href="#"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text></a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+    <div class="login"  >
+            <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a alingCenter" data-transition="pop">Sign in</a>
+    </div>
+    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+    <form>
+        <div style="padding:10px 20px;">
+            <h3>Please sign in</h3>
+            <label for="un" class="ui-hidden-accessible">Username:</label>
+            <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a">
+            <label for="pw" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
+            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check"><a href="#inBox">Sign in</a></button>
+        </div>
+    </form>
+    </div>
+
+    <div class="logoBottelme">
+        <p>BottleMe</p>
+    </div>
+
+    </div><!-- /content -->
+
+    
+</div><!-- /page -->
+
+
 <div data-role="page" id="inBox">
 
     <div data-role="header">

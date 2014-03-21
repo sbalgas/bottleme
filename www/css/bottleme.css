@@ -1,1 +1,14 @@
-.ui-body-c, .ui-overlay-c { background:#00BFFF !important; }
+.logoBottelme{
+	text-align: center;
+	margin-top: 40%;
+	font-family:Helvetica;
+	font-size: 40px;
+	color: white;
+	
+}
+
+.login{
+	text-align: center;
+	position: relative;
+	margin-top: 60%;
+}
