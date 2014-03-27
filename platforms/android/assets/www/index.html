@@ -3,40 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>BottleMe</title>
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
+
+    <script src="js/underscore/underscore-1.5.2-dev.js"></script>
+    <script src="js/backbone/backbonejs-1.1.0-dev.js"></script>
+
+    <script src="js/persistence/persistence-dev.js"></script>
+    <script src="js/persistence/persistence.store.sql-dev.js"></script>
+    <script src="js/persistence/persistence.store.websql-dev.js"></script>
+
+    <link rel="stylesheet" href="css/bottleme.css">
+
 </head>
 <body>
-<div data-role="page" id="inBox">
+
+<div data-role="page" id="principal">
 
     <div data-role="header">
         <h1>BottleMe</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-        <ul data-role="listview" data-inset="true">
-    <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
-    <li><a href="index.html">
-    <h2>Stephen Weber</h2>
-    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-    </a></li>
-    <li><a href="index.html">
-    <h2>jQuery Team</h2>
-    <p><strong>Boston Conference Planning</strong></p>
-    <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-    </a></li>
-    <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
-    <li><a href="index.html">
-    <h2>Avery Walker</h2>
-    <p><strong>Re: Dinner Tonight</strong></p>
-    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-    </a></li>
-</ul>
+        <button><a href="#escibirMsj">Escribir mensaje</a></button>
+        <button><a href="#playa">Ir a la playa</a></button>
+        <button><a href="#">Enviar gaviota</a></button>
+        <button><a href="#">Salir</a></button>
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+         <div data-role="navbar">
+            <ul>
+                <li><a href="#escibirMsj" data-icon="edit">New</a></li>
+                <li><a href="#playa" data-icon="mail">In Box</a></li>
+                <li><a href="#setup" data-icon="gear">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="escibirMsj">
+
+    <div data-role="header">
+        <h1>BottleMe</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <textarea id="textAreaMensaje">
+
+
+
+            @anonymus</textarea>
+        <label><input type="checkbox" name="checkbox-0" id="chkFirmar">Firmar</label>
+        <button><a href="#elegirCorriente">Elegir corriente</a></button>
+        <button><a href="#inBox" onclick="alert('msj enviado al mar');">Hechar al mar</a></button>
+
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+         <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="edit" class="ui-btn-active">New</a></li>
+                <li><a href="#playa" data-icon="mail">In Box</a></li>
+                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="elegirCorriente">
+
+    <div data-role="header">
+        <h1>BottleMe</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview">
+          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Amor</a></li>
+          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Ciencia</a></li>
+          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Filosofia</a></li>
+        </ul>
 
     </div><!-- /content -->
 
@@ -44,13 +91,66 @@
          <div data-role="navbar">
             <ul>
                 <li><a href="#" data-icon="edit">New</a></li>
-                <li><a href="#inBox" data-icon="mail" class="ui-btn-active">In Box</a></li>
+                <li><a href="#playa" data-icon="mail" class="ui-btn-active">In Box</a></li>
                 <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
             </ul>
         </div><!-- /navbar -->
     </div><!-- /footer -->
 </div><!-- /page -->
 
+<div data-role="page" id="playa">
+
+    <div data-role="header">
+        <h1>BottleMe</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <button><a href="#" onclick="alert('no hay botellas en tu playa');">Recoger botella</a></button>
+        <button onclick="revisarGaviotas();">Revisar gaviotas</button>
+
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+         <div data-role="navbar">
+            <ul>
+                <li><a href="#escribirMsj" data-icon="edit">New</a></li>
+                <li><a href="#" data-icon="mail" class="ui-btn-active">In Box</a></li>
+                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+ <div data-role="page" id="login">
+
+    <div data-role="header">
+        <h1>Wellcome</h1>
+        <a href="#"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text></a>
+    </div>/header
+
+    <div role="main" class="ui-content">
+    <div class="login"  >
+            <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a alingCenter" data-transition="pop">Sign in</a>
+    </div>
+    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+        <div style="padding:10px 20px;">
+            <h3>Sign in</h3>
+            <label for="user" class="ui-hidden-accessible">Username:</label>
+            <input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
+            <label for="pass" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
+        </div>
+    </div>
+
+    <div class="logoBottelme">
+        <p>BottleMe</p>
+    </div>
+
+    </div>/content
+
+    
+</div>
 
 <div data-role="page" id="setup">
 
@@ -94,17 +194,60 @@
     <div data-role="footer"  data-position="fixed">
          <div data-role="navbar">
             <ul>
-                <li><a href="#" data-icon="edit">New</a></li>
-                <li><a href="#inBox" data-icon="mail" data-transition="fade" data-direction="reverse">In Box</a></li>
-                <li><a href="#setup" data-icon="gear"  class="ui-btn-active">Setup</a></li>
+                <li><a href="#escribirMsj" data-icon="edit">New</a></li>
+                <li><a href="#playa" data-icon="mail" data-transition="fade" data-direction="reverse">In Box</a></li>
+                <li><a href="#" data-icon="gear"  class="ui-btn-active">Setup</a></li>
             </ul>
         </div><!-- /navbar -->
     </div><!-- /footer -->
 </div><!-- /page -->
 
+<script type="text/javascript">
+    var logueado = false;
+    var navegacion = '';
 
+    $( "#popupLogin" ).popup();
 
+    $('#chkFirmar').on('click', function(){
 
+        if($("#chkFirmar").is(':checked')) {  
+            navegacion = 'escribirMsj';
+            $( "#popupLogin" ).popup("open");
+        } else {  
+            $('#textAreaMensaje').val('@anonymus');
+        } ;
+        
+    });
 
+    function signIn(){
+        $( "#popupLogin" ).popup("close");
+        logueado = true;
+        //alert('cambiando area');
+
+        switch(true){
+            case navegacion == 'escribirMsj':
+                $('#textAreaMensaje').val('@'+$('#user').val());
+                break;
+            case navegacion == 'revisarGaviotas':
+                revisarGaviotas();
+                break;
+            default:
+                alert('error');
+        }
+
+        $('#textAreaMensaje').val('@'+$('#user').val());
+        $("#chkFirmar").attr('checked', true);
+    }
+
+    function revisarGaviotas(){
+        if(logueado){
+            alert('no hay gaviotas en tu playa');
+            return;
+        }
+
+        navegacion = 'revisarGaviotas';
+        $( "#popupLogin" ).popup("open");
+    }
+</script>
 </body>
 </html>

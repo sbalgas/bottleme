@@ -1,9 +1,9 @@
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes.dex : \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/BuildConfig.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/BottleMe.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/R$string.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/R$attr.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/R$xml.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/R$drawable.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/classes/com/codequark/bottleme/R.class \
-/home/yorx/Proyectos/bottleme/platforms/android/ant-build/dexedLibs/classes-8d0578bd7756954a8700f9f4bb5b8d87.jar \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes.dex : \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/R$drawable.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/BuildConfig.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/R.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/R$attr.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/R$xml.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/R$string.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/classes/com/codequark/bottleme/BottleMe.class \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/ant-build/dexedLibs/classes-43931c3181fb6e0ecab659996e3ed9d0.jar \
