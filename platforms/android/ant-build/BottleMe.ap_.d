@@ -19,6 +19,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/spec.html \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/res \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/cordova_plugins.js \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/images \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/spec \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/index.html \
@@ -330,6 +331,10 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/res/screen/android/screen-xhdpi-landscape.png \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/res/screen/bada/screen-portrait.png \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/res/screen/windows-phone/screen-portrait.jpg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/images/2.jpg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/images/3.jpg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/images/4.jpg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/images/1.jpg \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/calendar \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/persistence \
@@ -343,6 +348,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/classie.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/ytmenu.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/modernizr.custom.js \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/boxlayout.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/calendar/data.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/calendar/modernizr.custom.63321.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/calendar/jquery.calendario.js \

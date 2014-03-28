@@ -1,285 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>BottleMe</title>
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.mobile-1.4.2.min.js"></script>
-
-    <script src="js/underscore/underscore-1.5.2-dev.js"></script>
-    <script src="js/backbone/backbonejs-1.1.0-dev.js"></script>
-
-    <script src="js/persistence/persistence-dev.js"></script>
-    <script src="js/persistence/persistence.store.sql-dev.js"></script>
-    <script src="js/persistence/persistence.store.websql-dev.js"></script>
-
-    <link rel="stylesheet" href="css/bottleme.css">
-
-    <link rel="stylesheet" type="text/css" href="css/slide/default.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Fullscreen Layout with Page Transitions</title>
+        <meta name="description" content="Fullscreen Layout with Page Transitions" />
+        <meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/slide/component.css" />
         <script src="js/slide/modernizr.custom.js"></script>
-</head>
-<body>
-
-<div data-role="page" id="principal">
-
-    <div role="main" class="ui-content">
-
+    </head>
+    <body>
         <div class="container"> 
-            <!-- Codrops top bar -->
-            <div class="codrops-top clearfix">
-                <a href="http://tympanus.net/Development/FullscreenLayoutPageTransitions/"><strong>&laquo; Previous Demo: Fullscreen Layout with Page Transitions</strong></a>
-                <span class="right"><a href="http://tympanus.net/codrops/?p=14806"><strong>Back to the Codrops Article</strong></a></span>
-            </div><!--/ Codrops top bar -->
-            <header class="clearfix">
-                <h1>Buen dia <span>Wellcome</span></h1> 
-            </header>
-            <div class="main">
-                <p>This menu is inspired by the left side menu found on YouTube. When clicking on the menu label and icon.</p>
-                <div class="side">
-                    <nav class="dr-menu">
-                        <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Acciones</a></div>
-                        <ul>
-                            <li><a class="dr-icon dr-icon-user" href="#escribirMsj">Escribir Msj</a></li>
-                            <li><a class="dr-icon dr-icon-camera" href="#playa">Ir a la playa</a></li>
-                            <li><a class="dr-icon dr-icon-heart" href="#">Favorites</a></li>
-                            <li><a class="dr-icon dr-icon-bullhorn" href="#">Subscriptions</a></li>
-                            <li><a class="dr-icon dr-icon-download" href="#">Downloads</a></li>
-                            <li><a class="dr-icon dr-icon-settings" href="#">Settings</a></li>
-                            <li><a class="dr-icon dr-icon-switch" href="#">Logout</a></li>
+            <div id="bl-main" class="bl-main">
+                <section>
+                    <div class="bl-box">
+                        <h2 class="bl-icon bl-icon-about">About</h2>
+                    </div>
+                    <div class="bl-content">
+                        <h2>About this layout</h2>
+                        <p>This responsive layout is based on an initial grid of four boxes. Once a box is clicked, it gets resized to fullscreen and the other boxes scale down and fade out. In the work section we experiment with another transition which is to show a panel by making it appear from the bottom while scaling the current one down. To see it in action, open the work section and click on one of the portfolio items and navigate through them.</p>
+                        <p>
+                            <a href="http://tympanus.net/Development/ResponsiveMultiLevelMenu/"><strong>&laquo; Previous Demo</strong></a> |
+                            <a href="http://tympanus.net/codrops/?p=14783"><strong>Back to the Codrops Article</strong></a>
+                        </p>
+                    </div>
+                    <span class="bl-icon bl-icon-close"></span>
+                </section>
+                <section id="bl-work-section">
+                    <div class="bl-box">
+                        <h2 class="bl-icon bl-icon-works">Works</h2>
+                    </div>
+                    <div class="bl-content">
+                        <h2>My Works</h2>
+                        <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+                        <ul id="bl-work-items">
+                            <li data-panel="panel-1"><a href="#"><img src="images/1.jpg" /></a></li>
+                            <li data-panel="panel-2"><a href="#"><img src="images/2.jpg" /></a></li>
+                            <li data-panel="panel-3"><a href="#"><img src="images/3.jpg" /></a></li>
+                            <li data-panel="panel-4"><a href="#"><img src="images/4.jpg" /></a></li>
                         </ul>
+                        <p>Illustrations by <a href="http://dribbble.com/isaac317/click">Isaac Montemayor</a></p>
+                    </div>
+                    <span class="bl-icon bl-icon-close"></span>
+                </section>
+                <section>
+                    <div class="bl-box">
+                        <h2 class="bl-icon bl-icon-blog">Blog</h2>
+                    </div>
+                    <div class="bl-content">
+                        <h2>My Musings</h2>
+                        <article>
+                            <h3>Being a Freelance Designer</h3>
+                            <p>Stumptown helvetica cardigan, odd future seitan tattooed flannel. Kale chips direct trade cray beard. 8-bit etsy butcher post-ironic blog lo-fi mcsweeney's, sustainable pickled umami flexitarian DIY ethical plaid trust fund. Wolf cred organic, terry richardson aesthetic four loko occupy vegan chillwave readymade deep... <a href="#">Read more</a></p>
+                        </article>
+                        <article>
+                            <h3>Working with Photoshop</h3>
+                            <p>Cosby sweater odd future gluten-free actually dreamcatcher. Fixie cray vice sriracha disrupt, lo-fi pitchfork mcsweeney's swag YOLO meh chambray etsy. Keytar sriracha fanny pack church-key hashtag vice blog. 3 wolf moon VHS helvetica, raw denim deep v shoreditch seitan twee... <a href="#">Read more</a></p>
+                        </article>
+                        <article>
+                            <h3>Making use of Icon Fonts</h3>
+                            <p>Locavore irony gastropub chillwave, butcher meggings flexitarian pinterest master cleanse godard. Intelligentsia pop-up neutra, williamsburg gastropub godard pinterest swag deep v umami lomo. Butcher next level 90's wolf bushwick, narwhal photo booth YOLO kale chips whatever small batch. Meh viral ethical hella cardigan portland, street art mlkshk meggings mixtape kale chips cliche messenger bag pitchfork... <a href="#">Read more</a></p>
+                        </article>
+                        <article>
+                            <h3>Being a Freelance Designer</h3>
+                            <p>Stumptown helvetica cardigan, odd future seitan tattooed flannel. Kale chips direct trade cray beard. 8-bit etsy butcher post-ironic blog lo-fi mcsweeney's, sustainable pickled umami flexitarian DIY ethical plaid trust fund. Wolf cred organic, terry richardson aesthetic four loko occupy vegan chillwave readymade deep... <a href="#">Read more</a></p>
+                        </article>
+                        <article>
+                            <h3>Working with Photoshop</h3>
+                            <p>Cosby sweater odd future gluten-free actually dreamcatcher. Fixie cray vice sriracha disrupt, lo-fi pitchfork mcsweeney's swag YOLO meh chambray etsy. Keytar sriracha fanny pack church-key hashtag vice blog. 3 wolf moon VHS helvetica, raw denim deep v shoreditch seitan twee... <a href="#">Read more</a></p>
+                        </article>
+                        <article>
+                            <h3>Making use of Icon Fonts</h3>
+                            <p>Locavore irony gastropub chillwave, butcher meggings flexitarian pinterest master cleanse godard. Intelligentsia pop-up neutra, williamsburg gastropub godard pinterest swag deep v umami lomo. Butcher next level 90's wolf bushwick, narwhal photo booth YOLO kale chips whatever small batch. Meh viral ethical hella cardigan portland, street art mlkshk meggings mixtape kale chips cliche messenger bag pitchfork... <a href="#">Read more</a></p>
+                        </article>
+                    </div>
+                    <span class="bl-icon bl-icon-close"></span>
+                </section>
+                <section>
+                    <div class="bl-box">
+                        <h2 class="bl-icon bl-icon-contact">Contact</h2>
+                    </div>
+                    <div class="bl-content">
+                        <h2>Get in touch</h2>
+                        <p>Pinterest semiotics single-origin coffee craft beer thundercats irony, tumblr bushwick intelligentsia pickled. Narwhal mustache godard master cleanse street art, occupy ugh selfies put a bird on it cray salvia four loko gluten-free shoreditch. Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                    </div>
+                    <span class="bl-icon bl-icon-close"></span>
+                </section>
+                <!-- Panel items for the works -->
+                <div class="bl-panel-items" id="bl-panel-work-items">
+                    <div data-panel="panel-1">
+                        <div>
+                            <img src="images/1.jpg" />
+                            <h3>Fixie bespoke</h3>
+                            <p>Iphone artisan direct trade ethical Austin. Fixie bespoke banh mi ugh, deep v vinyl hashtag. Tumblr gentrify keffiyeh pop-up iphone twee biodiesel. Occupy american apparel freegan cliche. Mustache trust fund 8-bit jean shorts mumblecore thundercats. Pour-over small batch forage cray, banjo post-ironic flannel keffiyeh cred ethnic semiotics next level tousled fashion axe. Sustainable cardigan keytar fap bushwick bespoke.</p>
+                        </div>
+                    </div>
+                    <div data-panel="panel-2">
+                        <div>
+                            <img src="images/2.jpg" />
+                            <h3>Chillwave mustache</h3>
+                            <p>Squid vinyl scenester literally pug, hashtag tofu try-hard typewriter polaroid craft beer mlkshk cardigan photo booth PBR. Chillwave 90's gentrify american apparel carles disrupt. Pinterest semiotics single-origin coffee craft beer thundercats irony, tumblr bushwick intelligentsia pickled. Narwhal mustache godard master cleanse street art, occupy ugh selfies put a bird on it cray salvia four loko gluten-free shoreditch.</p>
+                        </div>
+                    </div>
+                    <div data-panel="panel-3">
+                        <div>
+                            <img src="images/3.jpg" />
+                            <h3>Austin hella</h3>
+                            <p>Ethical cray wayfarers leggings vice, seitan banksy small batch ethnic master cleanse. Pug chillwave etsy, scenester meh occupy blue bottle tousled blog tonx pinterest selvage mixtape swag cosby sweater. Synth tousled direct trade, hella Austin craft beer ugh chambray.</p>
+                        </div>
+                    </div>
+                    <div data-panel="panel-4">
+                        <div>
+                            <img src="images/4.jpg" />
+                            <h3>Brooklyn dreamcatcher</h3>
+                            <p>Fashion axe 90's pug fap. Blog wayfarers brooklyn dreamcatcher, bicycle rights retro YOLO. Wes anderson lomo 90's food truck 3 wolf moon, twee jean shorts. Iphone small batch twee wolf yr before they sold out. Brooklyn echo park cred, portland pug selvage flannel seitan tousled mcsweeney's.</p>
+                        </div>
+                    </div>
+                    <nav>
+                        <span class="bl-next-work">&gt; Next Project</span>
+                        <span class="bl-icon bl-icon-close"></span>
                     </nav>
                 </div>
             </div>
         </div><!-- /container -->
-        <script src="js/slide/ytmenu.js"></script>
-        
-    </div><!-- /content -->
-
-        <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#escibirMsj" data-icon="edit">New</a></li>
-                <li><a href="#playa" data-icon="mail">In Box</a></li>
-                <li><a href="#setup" data-icon="gear">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-
-<script src="js/cbpTooltipMenu.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/slide/boxlayout.js"></script>
         <script>
-            var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+            $(function() {
+                Boxlayout.init();
+            });
         </script>
-
-        <div data-role="page" id="escribirMsj">
-
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content">
-        <textarea id="textAreaMensaje">
-
-
-
-            @anonymus</textarea>
-        <label><input type="checkbox" name="checkbox-0" id="chkFirmar">Firmar</label>
-        <button><a href="#elegirCorriente">Elegir corriente</a></button>
-        <button><a href="#inBox" onclick="alert('msj enviado al mar');">Hechar al mar</a></button>
-
-    </div><!-- /content -->
-
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#" data-icon="edit" class="ui-btn-active">New</a></li>
-                <li><a href="#playa" data-icon="mail">In Box</a></li>
-                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<div data-role="page" id="elegirCorriente">
-
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content">
-        <ul data-role="listview">
-          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Amor</a></li>
-          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Ciencia</a></li>
-          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Filosofia</a></li>
-        </ul>
-
-    </div><!-- /content -->
-
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#" data-icon="edit">New</a></li>
-                <li><a href="#playa" data-icon="mail" class="ui-btn-active">In Box</a></li>
-                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<div data-role="page" id="playa">
-
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content">
-        <button><a href="#" onclick="alert('no hay botellas en tu playa');">Recoger botella</a></button>
-        <button onclick="revisarGaviotas();">Revisar gaviotas</button>
-
-    </div><!-- /content -->
-
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#escribirMsj" data-icon="edit">New</a></li>
-                <li><a href="#" data-icon="mail" class="ui-btn-active">In Box</a></li>
-                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
-</div><!-- /page -->
-
- <div data-role="page" id="login">
-
-    <div data-role="header">
-        <h1>Wellcome</h1>
-        <a href="#"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text></a>
-    </div>/header
-
-    <div role="main" class="ui-content">
-    <div class="login"  >
-            <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a alingCenter" data-transition="pop">Sign in</a>
-    </div>
-    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-        <div style="padding:10px 20px;">
-            <h3>Sign in</h3>
-            <label for="user" class="ui-hidden-accessible">Username:</label>
-            <input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
-            <label for="pass" class="ui-hidden-accessible">Password:</label>
-            <input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
-            <button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
-        </div>
-    </div>
-
-    <div class="logoBottelme">
-        <p>BottleMe</p>
-    </div>
-
-    </div>/content
-
-    
-</div>
-
-<div data-role="page" id="setup">
-
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
-
-    <div role="main" class="ui-content">
-        <form action="#" method="get">
-                <h2>Here's a few form elements</h2>
-
-                <p>These are here to see if this slows down rendering.</p>
-
-                <div data-role="fieldcontain">
-                 <label for="name">Text Input:</label>
-                 <input type="text" name="name" id="name" value=""  />
-                </div>
-
-                <div data-role="fieldcontain">
-                <label for="textarea">Textarea:</label>
-                <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-                </div>
-
-                <div data-role="fieldcontain">
-                    <label for="slider2">Flip switch:</label>
-                    <select name="slider2" id="slider2" data-role="slider">
-                        <option value="off">Off</option>
-                        <option value="on">On</option>
-                    </select>
-                </div>
-
-                <div data-role="fieldcontain">
-                    <label for="slider">Slider:</label>
-                    <input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true" />
-                </div>
-
-            </form>
-
-    </div><!-- /content -->
-
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#escribirMsj" data-icon="edit">New</a></li>
-                <li><a href="#playa" data-icon="mail" data-transition="fade" data-direction="reverse">In Box</a></li>
-                <li><a href="#" data-icon="gear"  class="ui-btn-active">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<script type="text/javascript">
-    var logueado = false;
-    var navegacion = '';
-
-    $( "#popupLogin" ).popup();
-
-    $('#chkFirmar').on('click', function(){
-
-        if($("#chkFirmar").is(':checked')) {  
-            navegacion = 'escribirMsj';
-            $( "#popupLogin" ).popup("open");
-        } else {  
-            $('#textAreaMensaje').val('@anonymus');
-        } ;
-        
-    });
-
-    function signIn(){
-        $( "#popupLogin" ).popup("close");
-        logueado = true;
-        //alert('cambiando area');
-
-        switch(true){
-            case navegacion == 'escribirMsj':
-                $('#textAreaMensaje').val('@'+$('#user').val());
-                break;
-            case navegacion == 'revisarGaviotas':
-                revisarGaviotas();
-                break;
-            default:
-                alert('error');
-        }
-
-        $('#textAreaMensaje').val('@'+$('#user').val());
-        $("#chkFirmar").attr('checked', true);
-    }
-
-    function revisarGaviotas(){
-        if(logueado){
-            alert('no hay gaviotas en tu playa');
-            return;
-        }
-
-        navegacion = 'revisarGaviotas';
-        $( "#popupLogin" ).popup("open");
-    }
-</script>
-</body>
+    </body>
 </html>
-<!-- branch pruebaCodrops -->
