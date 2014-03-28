@@ -25,6 +25,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/index2.html \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/index5.html \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/images \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/index6.html \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/spec \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/index.html \
