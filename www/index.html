@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="css/bottleme.css">
 
     <link rel="stylesheet" type="text/css" href="css/slide/default.css" />
-        
+        <link rel="stylesheet" type="text/css" href="css/slide/component.css" />
+        <script src="js/slide/modernizr.custom.js"></script>
 </head>
 <body>
 
@@ -26,18 +27,37 @@
     <div role="main" class="ui-content">
 
         <div class="container"> 
+            <!-- Codrops top bar -->
+            <div class="codrops-top clearfix">
+                <a href="http://tympanus.net/Development/FullscreenLayoutPageTransitions/"><strong>&laquo; Previous Demo: Fullscreen Layout with Page Transitions</strong></a>
+                <span class="right"><a href="http://tympanus.net/codrops/?p=14806"><strong>Back to the Codrops Article</strong></a></span>
+            </div><!--/ Codrops top bar -->
             <header class="clearfix">
-                <h1> Buen Dia <span>Wellcome</span></h1> 
+                <h1>Buen dia <span>Wellcome</span></h1> 
             </header>
-        </div>
-
-        <button><a href="#escibirMsj">Escribir mensaje</a></button>
-        <button><a href="#playa">Ir a la playa</a></button>
-        <button><a href="#">Enviar gaviota</a></button>
-        <button><a href="#">Salir</a></button>
+            <div class="main">
+                <p>This menu is inspired by the left side menu found on YouTube. When clicking on the menu label and icon.</p>
+                <div class="side">
+                    <nav class="dr-menu">
+                        <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Acciones</a></div>
+                        <ul>
+                            <li><a class="dr-icon dr-icon-user" href="#escribirMsj">Escribir Msj</a></li>
+                            <li><a class="dr-icon dr-icon-camera" href="#playa">Ir a la playa</a></li>
+                            <li><a class="dr-icon dr-icon-heart" href="#">Favorites</a></li>
+                            <li><a class="dr-icon dr-icon-bullhorn" href="#">Subscriptions</a></li>
+                            <li><a class="dr-icon dr-icon-download" href="#">Downloads</a></li>
+                            <li><a class="dr-icon dr-icon-settings" href="#">Settings</a></li>
+                            <li><a class="dr-icon dr-icon-switch" href="#">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div><!-- /container -->
+        <script src="js/slide/ytmenu.js"></script>
+        
     </div><!-- /content -->
 
-    <div data-role="footer"  data-position="fixed">
+        <div data-role="footer"  data-position="fixed">
          <div data-role="navbar">
             <ul>
                 <li><a href="#escibirMsj" data-icon="edit">New</a></li>
@@ -48,7 +68,13 @@
     </div><!-- /footer -->
 </div><!-- /page -->
 
-<div data-role="page" id="escibirMsj">
+
+<script src="js/cbpTooltipMenu.min.js"></script>
+        <script>
+            var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+        </script>
+
+        <div data-role="page" id="escribirMsj">
 
     <div data-role="header">
         <h1>BottleMe</h1>

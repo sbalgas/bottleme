@@ -42,6 +42,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/calendar/custom_1.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/calendar/demo.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/icomoon.woff \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/icomoon.dev.svg \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/license.txt \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/icomoon.svg \
@@ -52,6 +53,18 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/icomoon.ttf \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/fontawesome.svg \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/fontawesome.eot \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/bpicons \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons/cbp-tmicons.eot \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons/cbp-tmicons.dev.svg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons/license.txt \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons/cbp-tmicons.svg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons/cbp-tmicons.ttf \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/tmicons/cbp-tmicons.woff \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/bpicons/bpicons.ttf \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/bpicons/bpicons.svg \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/bpicons/license.txt \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/bpicons/bpicons.eot \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/fonts/bpicons/bpicons.woff \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/images/icons-svg \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/images/bg.jpg \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/images/ajax-loader.gif \
@@ -324,6 +337,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/Untitled Folder \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/jquery.mobile-1.4.2.min.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/backbone \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/cbpTooltipMenu.min.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/underscore \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/index.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/classie.js \
