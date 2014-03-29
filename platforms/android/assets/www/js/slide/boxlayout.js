@@ -69,7 +69,7 @@ var Boxlayout = (function() {
 			}
 			isAnimating = true;
 
-
+			//se busca el siguente panel $panel
 			var $panel = $workPanelsContainer.find("[data-panel='panel-2']");//al que hicimos clic
 			//alert($panel.index());
 			currentWorkPanel = $panel.index();

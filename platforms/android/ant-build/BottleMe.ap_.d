@@ -44,6 +44,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/jquery.mobile-1.4.2.min.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/style3.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/style4.css \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/demo-single-page.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/style1.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/component.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/normalize.css \
@@ -54,6 +55,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/animations.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/multilevelmenu.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/demo.css \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/animation.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/slide/style2.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/calendar/custom_3.css \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/css/calendar/custom_2.css \
@@ -405,6 +407,7 @@
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/underscore \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/index.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/borderMenu.js \
+/home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/transition.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/intentoGatito.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/classie.js \
 /home/dengue8830/Proyectos/web/hibridas/bottleme_repo/platforms/android/assets/www/js/slide/ytmenu.js \
