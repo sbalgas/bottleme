@@ -43,41 +43,9 @@ var Boxlayout = (function() {
 	}
 
 	function initEvents() {
-		
-		$sections.each( function() {
-			
-			var $section = $( this );
-
-			// expand the clicked section and scale down the others
-			$section.on( 'click', function() {
-
-				if( !$section.data( 'open' ) ) {
-					$section.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
-					$el.addClass( 'bl-expand-item' );	
-				}
-
-			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
-				
-				// close the expanded section and scale up the others
-				$section.data( 'open', false ).removeClass( 'bl-expand' ).on( transEndEventName, function( event ) {
-					if( !$( event.target ).is( 'section' ) ) return false;
-					$( this ).off( transEndEventName ).removeClass( 'bl-expand-top' );
-				} );
-
-				if( !supportTransitions ) {
-					$section.removeClass( 'bl-expand-top' );
-				}
-
-				$el.removeClass( 'bl-expand-item' );
-				
-				return false;
-
-			} );
-
-		} );
 
 		// clicking on a work item: the current section scales down and the respective work panel slides up
-		$workItems.on( 'click', function( event ) {
+		/*$workItems.on( 'click', function( event ) {
 
 			// scale down main section
 			$sectionWork.addClass( 'bl-scale-down' );
@@ -91,7 +59,7 @@ var Boxlayout = (function() {
 
 			return false;
 
-		} );
+		} );*/
 
 		// navigating the work items: current work panel scales down and the next work panel slides up
 		$nextWorkItem.on( 'click', function( event ) {
@@ -100,6 +68,13 @@ var Boxlayout = (function() {
 				return false;
 			}
 			isAnimating = true;
+
+
+			var $panel = $workPanelsContainer.find("[data-panel='panel-2']");//al que hicimos clic
+			//alert($panel.index());
+			currentWorkPanel = $panel.index();
+			$panel.addClass( 'bl-show-work' );
+
 
 			var $currentPanel = $workPanels.eq( currentWorkPanel );
 			currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel + 1 : 0;
@@ -127,7 +102,7 @@ var Boxlayout = (function() {
 
 			// scale up main section
 			$sectionWork.removeClass( 'bl-scale-down' );
-			$workPanelsContainer.removeClass( 'bl-panel-items-show' );
+			//$workPanelsContainer.removeClass( 'bl-panel-items-show' );
 			$workPanels.eq( currentWorkPanel ).removeClass( 'bl-show-work' );
 			
 			return false;
