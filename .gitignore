@@ -27,6 +27,15 @@ proguard/
 *.ipr
 *.iws
 .idea/
+<<<<<<< HEAD
 #Compilat
 #platforms/android/CordovaLib/ant-build/
 #platforms/android/ant-build/
+=======
+
+
+#compilacion
+platforms/android/CordovaLib/ant-build/build.prop
+platforms/android/ant-build/BottleMe.ap_.d
+platforms/android/ant-build/build.prop
+>>>>>>> bbe2cbfa2a6c1a029d9259c97c120a36f3796193
