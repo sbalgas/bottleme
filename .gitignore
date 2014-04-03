@@ -27,3 +27,6 @@ proguard/
 *.ipr
 *.iws
 .idea/
+#Compilat
+#platforms/android/CordovaLib/ant-build/
+#platforms/android/ant-build/
