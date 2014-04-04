@@ -28,7 +28,7 @@ proguard/
 *.iws
 .idea/
 
-#compilacion
+# compilacion
 platforms/android/CordovaLib/ant-build/build.prop
 platforms/android/ant-build/BottleMe.ap_.d
 platforms/android/ant-build/build.prop
