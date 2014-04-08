@@ -19,7 +19,8 @@
 body {
     overflow-x:hidden;
     -webkit-text-size-adjust:none;
-    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; */ 
+    font-family: 'Lato', Calibri, Arial, sans-serif;/* @dengue8830 */
     color:#000;
     font-size:14px;
     display:-webkit-box;
@@ -42,7 +43,8 @@ body {
 
     font-size:14px;
     line-height:20px;
-    color:inherit
+    /* color:inherit;*/ /*este es la regla original*/
+    color:rgba(255, 255, 255, 1); /* #fff @dengue8830*/
 }
 
 

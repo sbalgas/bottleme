@@ -28,11 +28,13 @@
 }
 
 #afui.ios7 .panel, #afui.ios7 #modalContainer {
-    background:rgba(238,238,238,255);    
+    /* background:rgba(238,238,238,255);     */ /* original @dengue8830 */
+    background:rgba(71, 163, 218, 1);    /*hexa: #47a3da modificado por @dengue8830 */
 }
 
 #afui.ios7 .panel h2 { 
-    color:inherit;
+    /* color:inherit; */
+    color:rgba(255, 255, 255, 1); /* #fff @dengue8830*/
 }
 
 #afui.ios7 .footer {
