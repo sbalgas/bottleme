@@ -4,9 +4,9 @@
 
 /* border rgba(158,158,158,255) */
 
-#afui.ios7 {
+/* #afui.ios7 {
      font-family:'HelveticaNeue', 'Helvetica Neue',Helvetica, Arial, sans-serif;
-}
+} */
 
 #afui.ios7 .header {
     background:rgb(249,249,249);
@@ -35,6 +35,55 @@
 #afui.ios7 .panel h2 { 
     /* color:inherit; */
     color:rgba(255, 255, 255, 1); /* #fff @dengue8830*/
+}
+/* cuac */
+#nube1{
+   position: absolute;
+   top: 40%;
+   left: 80%;
+   width: 100%;
+   height: 20%;
+   background-size:100% 100%;
+   background: url(../../img/nube5.png);
+     background-repeat:no-repeat;  
+   /* left: 0;
+   width: 30em;
+   height: 20em; */
+}
+
+#nube2{
+   position: absolute;
+   top: 48%;
+   left: 40%;
+   width: 100%;
+   height: 20%;
+   background-size:100% 100%;
+   background: url(../../img/nube5.png);
+     background-repeat:no-repeat;  
+   /* left: 0;
+   width: 30em;
+   height: 20em; */
+}
+
+#fixme{
+   position: absolute;
+   top: 85%;
+   width: 100%;
+   height: 7%;
+   background-size:100% 100%;
+   background: url(../../img/ola2.png);
+     background-repeat:repeat-x;  
+   /* left: 0;
+   width: 30em;
+   height: 20em; */
+}
+/* fin cuac */
+/* @dengue8830 agregado footer personalizado para la arena */
+#afui.ios7 .footer #footerArena {
+    background:rgba(249, 184, 86, 1); 
+    color:black;
+    border-top:1px solid rgba(158,158,158,255);
+    box-shadow:none;
 }
 
 #afui.ios7 .footer {

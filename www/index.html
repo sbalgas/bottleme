@@ -100,7 +100,15 @@
              var search=document.location.search.toLowerCase().replace("?","");
              //if(!search)
             $.ui.useOSThemes=true;
-            if(search.length>0) //Android fix has too many buggy issues on iOS - can't preview with $.os.android
+            //@dengue8830 modificacion para que tome nuestro theme por defecto.
+            $.ui.ready(function(){
+                    $("#afui").get(0).className='ios7';
+                    $.ui.toggleHeaderMenu();
+                    //$.ui.toggleNavMenu();
+
+            });
+            //@dengue8830 lo comento porque es para poner el theme segun el OS del celu
+            /*if(search.length>0) //Android fix has too many buggy issues on iOS - can't preview with $.os.android
             {
 
                $.ui.useOSThemes=true;
@@ -109,7 +117,7 @@
                 $.ui.ready(function(){
                     $("#afui").get(0).className=search;
                 });
-            }
+            }*/
             
             var webRoot = "./";
             // $.os.android=true;
@@ -120,7 +128,6 @@
 
             $(document).ready(function(){
                   // $.ui.launch();
-
             });
             
             /* This code is used to run as soon as intel.xdk activates */
@@ -147,7 +154,7 @@
             }
 
 
-            if($.os.android||$.os.ie||search=="android"){
+            /*if($.os.android||$.os.ie||search=="android"){
                 $.ui.ready(function(){
                     $("#main .list").append("<li><a id='toggleAndroidTheme'>Toggle Theme Color</a></li>");
                     var $el=$("#afui");
@@ -158,7 +165,7 @@
                             $el.addClass("light");
                     });
                 });
-            }                        
+            }     */                   
         </script>
 
 </head>
@@ -181,37 +188,19 @@
                     <h2 class='expanded' onclick='showHide(this,"main_info");'>Welcome</h2>
 
                     <p id='main_info'>Welcome to the kitchen sink demo for App Framework. Here you will find samples of how to use the App Framework libraries. Please select an option from below.</p>
-                    <ul class="list">
-                        <li class='red'>
-                            <a href="#af" id='aflink' class='icon home big'>App Framework</a>
-                        </li>
-                        <li class="blue">
-                            <a href="#afuidemo">App Framework UI</a>
-                        </li>
-                        <li>
-                            <a href="index.html" data-ignore="true">App Framework theme</a>
-                        </li>
-                         <li>
-                            <a href="index.html?ios" data-ignore="true">iOS theme</a>
-                        </li>
-                        <li>
-                            <a href="index.html?android" data-ignore="true">Android theme</a>
-                        </li>
-                        <li>
-                            <a href="index.html?win8" data-ignore="true">Win8 theme</a>
-                        </li>
-                        <li>
-                            <a href="index.html?bb" data-ignore="true">BB10 theme</a>
-                        </li>
-                       <li>
-                            <a href="index.html?ios7" data-ignore="true">ios7</a>
-                        </li>
-                         <li>
-                            <a href="index.html?tizen" data-ignore="true">tizen</a>
-                        </li>
 
-
-                    </ul>
+                    <div id="nube1"></div>
+                    <div id="nube2"></div>
+                    <div id="fixme"></div>
+                    
+                    <footer id="footerArena">
+                        <a href="#main" id='navbar_home' class='icon home'>Escribir Msj
+                        </a>
+                        <a href="#main" id='navbar_home' class='icon home'>Algo
+                        </a>
+                        <a href="#main" id='navbar_home' class='icon home'>Ver Mensajes
+                        </a>
+                    </footer>
                 </div>
                 <!---------------------------------------------->
                 <div title="AppFramework" id="af" class="panel" data-nav="menu_AppFramework" data-header="testheader">
