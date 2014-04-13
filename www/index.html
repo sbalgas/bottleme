@@ -1,253 +1,310 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BottleMe</title>
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BottleMe</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
 
-    <script src="js/underscore/underscore-1.5.2-dev.js"></script>
-    <script src="js/backbone/backbonejs-1.1.0-dev.js"></script>
+	<script src="js/underscore/underscore-1.5.2-dev.js"></script>
+	<script src="js/backbone/backbonejs-1.1.0-dev.js"></script>
 
-    <script src="js/persistence/persistence-dev.js"></script>
-    <script src="js/persistence/persistence.store.sql-dev.js"></script>
-    <script src="js/persistence/persistence.store.websql-dev.js"></script>
+	<script src="js/persistence/persistence-dev.js"></script>
+	<script src="js/persistence/persistence.store.sql-dev.js"></script>
+	<script src="js/persistence/persistence.store.websql-dev.js"></script>
 
-    <link rel="stylesheet" href="css/bottleme.css">
-
+	<link rel="stylesheet" href="css/bottleme.css">
+	<script src="js/general.js"></script>
 </head>
 <body>
 
+<div data-role="page" id="inicio">
+	<div class="wave"><img src="img/bg_wave.png" width="100%" border="0"/></div>
+	<div class="palme"><img src="img/palmera.png" width="100%" border="0"/></div>
+	
+	<div class="button_Login">
+		<div onclick="page('#registro')" class="bregister">Registrarme</div>
+		<div class="blogin">Ingresar</div>
+	</div>
+</div>
+<div data-role="page" id="registro">
+	<div class="wave"><img src="img/bg_wave_mini.png" width="100%" border="0"/></div>
+
+
+	<div class="formulario">
+		<div id="picture">
+			<img src="img/no_avatar_M.gif" class="avatar" width="80" border="0">
+		</div>
+		<div class="cleaner_h20"></div>
+		<div class="table">
+			<div class="label">Nick:</div>
+			<div class="inputs">
+				&nbsp;@<input autocomplete="off" data-role="none" placeholder="Ingrese su nick" class="text" type="text" name="nick" id="nick" value="">
+				<div class="subinput"></div>
+			</div>
+		</div>
+		<div class="cleaner_h20"></div>
+		<div class="table">
+			<div class="label">Email:</div>
+			<div class="inputs">
+				<input autocomplete="off" data-role="none" placeholder="Ingrese su email" class="text" type="text" name="email" id="email" value="">
+				<div class="subinput"></div>
+			</div>
+		</div>
+		<div class="cleaner_h20"></div>
+		<div class="table">
+			<div class="label">Contrase&ntilde;a:</div>
+			<div class="inputs">
+				<input autocomplete="off" data-role="none" placeholder="Ingrese su contrase&ntilde;a" class="text" type="password" name="pass" id="pass" value="">
+				<div class="subinput"></div>
+			</div>
+		</div>
+		<div class="cleaner_h20"></div>
+		<div class="inputs">
+			<input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true">
+	    	<label for="checkbox-mini-0">Acepto los términos y condiciones de uso.</label>
+	    </div>
+	    <div class="cleaner_h20"></div>
+	    <div align="center">
+		    <input type="button" data-inline="true" value="Aceptar">
+		    <input onclick="page('#inicio')" type="button" data-inline="true" value="Cancelar">
+	    </div>
+	</div>
+</div>
 <div data-role="page" id="principal">
 
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
+	<div data-role="header">
+		<h1>BottleMe</h1>
+	</div><!-- /header -->
 
-    <div role="main" class="ui-content">
-        <button><a href="#escibirMsj">Escribir mensaje</a></button>
-        <button><a href="#playa">Ir a la playa</a></button>
-        <button><a href="#">Enviar gaviota</a></button>
-        <button><a href="#">Salir</a></button>
-    </div><!-- /content -->
+	<div role="main" class="ui-content">
+		<button><a href="#escibirMsj">Escribir mensaje</a></button>
+		<button><a href="#playa">Ir a la playa</a></button>
+		<button><a href="#">Enviar gaviota</a></button>
+		<button><a href="#">Salir</a></button>
+	</div><!-- /content -->
 
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#escibirMsj" data-icon="edit">New</a></li>
-                <li><a href="#playa" data-icon="mail">In Box</a></li>
-                <li><a href="#setup" data-icon="gear">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
+	<div data-role="footer"  data-position="fixed">
+		 <div data-role="navbar">
+			<ul>
+				<li><a href="#escibirMsj" data-icon="edit">New</a></li>
+				<li><a href="#playa" data-icon="mail">In Box</a></li>
+				<li><a href="#setup" data-icon="gear">Setup</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
 </div><!-- /page -->
 
 <div data-role="page" id="escibirMsj">
 
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
+	<div data-role="header">
+		<h1>BottleMe</h1>
+	</div><!-- /header -->
 
-    <div role="main" class="ui-content">
-        <textarea id="textAreaMensaje">
+	<div role="main" class="ui-content">
+		<textarea id="textAreaMensaje">
 
 
 
-            @anonymus</textarea>
-        <label><input type="checkbox" name="checkbox-0" id="chkFirmar">Firmar</label>
-        <button><a href="#elegirCorriente">Elegir corriente</a></button>
-        <button><a href="#inBox" onclick="alert('msj enviado al mar');">Hechar al mar</a></button>
+			@anonymus</textarea>
+		<label><input type="checkbox" name="checkbox-0" id="chkFirmar">Firmar</label>
+		<button><a href="#elegirCorriente">Elegir corriente</a></button>
+		<button><a href="#inBox" onclick="alert('msj enviado al mar');">Hechar al mar</a></button>
 
-    </div><!-- /content -->
+	</div><!-- /content -->
 
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#" data-icon="edit" class="ui-btn-active">New</a></li>
-                <li><a href="#playa" data-icon="mail">In Box</a></li>
-                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
+	<div data-role="footer"  data-position="fixed">
+		 <div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="edit" class="ui-btn-active">New</a></li>
+				<li><a href="#playa" data-icon="mail">In Box</a></li>
+				<li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
 </div><!-- /page -->
 
 <div data-role="page" id="elegirCorriente">
 
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
+	<div data-role="header">
+		<h1>BottleMe</h1>
+	</div><!-- /header -->
 
-    <div role="main" class="ui-content">
-        <ul data-role="listview">
-          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Amor</a></li>
-          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Ciencia</a></li>
-          <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Filosofia</a></li>
-        </ul>
+	<div role="main" class="ui-content">
+		<ul data-role="listview">
+		  <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Amor</a></li>
+		  <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Ciencia</a></li>
+		  <li><a href="#inBox" onclick="alert('Enviado msj esa corriente');">Filosofia</a></li>
+		</ul>
 
-    </div><!-- /content -->
+	</div><!-- /content -->
 
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#" data-icon="edit">New</a></li>
-                <li><a href="#playa" data-icon="mail" class="ui-btn-active">In Box</a></li>
-                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
+	<div data-role="footer"  data-position="fixed">
+		 <div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="edit">New</a></li>
+				<li><a href="#playa" data-icon="mail" class="ui-btn-active">In Box</a></li>
+				<li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
 </div><!-- /page -->
 
 <div data-role="page" id="playa">
 
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
+	<div data-role="header">
+		<h1>BottleMe</h1>
+	</div><!-- /header -->
 
-    <div role="main" class="ui-content">
-        <button><a href="#" onclick="alert('no hay botellas en tu playa');">Recoger botella</a></button>
-        <button onclick="revisarGaviotas();">Revisar gaviotas</button>
+	<div role="main" class="ui-content">
+		<button><a href="#" onclick="alert('no hay botellas en tu playa');">Recoger botella</a></button>
+		<button onclick="revisarGaviotas();">Revisar gaviotas</button>
 
-    </div><!-- /content -->
+	</div><!-- /content -->
 
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#escribirMsj" data-icon="edit">New</a></li>
-                <li><a href="#" data-icon="mail" class="ui-btn-active">In Box</a></li>
-                <li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
+	<div data-role="footer"  data-position="fixed">
+		 <div data-role="navbar">
+			<ul>
+				<li><a href="#escribirMsj" data-icon="edit">New</a></li>
+				<li><a href="#" data-icon="mail" class="ui-btn-active">In Box</a></li>
+				<li><a href="#setup" data-icon="gear" data-transition="fade">Setup</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
 </div><!-- /page -->
 
  <div data-role="page" id="login">
 
-    <div data-role="header">
-        <h1>Wellcome</h1>
-        <a href="#"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text></a>
-    </div>/header
+	<div data-role="header">
+		<h1>Wellcome</h1>
+		<a href="#"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text></a>
+	</div>/header
 
-    <div role="main" class="ui-content">
-    <div class="login"  >
-            <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a alingCenter" data-transition="pop">Sign in</a>
-    </div>
-    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-        <div style="padding:10px 20px;">
-            <h3>Sign in</h3>
-            <label for="user" class="ui-hidden-accessible">Username:</label>
-            <input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
-            <label for="pass" class="ui-hidden-accessible">Password:</label>
-            <input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
-            <button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
-        </div>
-    </div>
+	<div role="main" class="ui-content">
+	<div class="login"  >
+			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a alingCenter" data-transition="pop">Sign in</a>
+	</div>
+	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+		<div style="padding:10px 20px;">
+			<h3>Sign in</h3>
+			<label for="user" class="ui-hidden-accessible">Username:</label>
+			<input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
+			<label for="pass" class="ui-hidden-accessible">Password:</label>
+			<input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
+			<button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
+		</div>
+	</div>
 
-    <div class="logoBottelme">
-        <p>BottleMe</p>
-    </div>
+	<div class="logoBottelme">
+		<p>BottleMe</p>
+	</div>
 
-    </div>/content
+	</div>/content
 
-    
+	
 </div>
 
 <div data-role="page" id="setup">
 
-    <div data-role="header">
-        <h1>BottleMe</h1>
-    </div><!-- /header -->
+	<div data-role="header">
+		<h1>BottleMe</h1>
+	</div><!-- /header -->
 
-    <div role="main" class="ui-content">
-        <form action="#" method="get">
-                <h2>Here's a few form elements</h2>
+	<div role="main" class="ui-content">
+		<form action="#" method="get">
+				<h2>Here's a few form elements</h2>
 
-                <p>These are here to see if this slows down rendering.</p>
+				<p>These are here to see if this slows down rendering.</p>
 
-                <div data-role="fieldcontain">
-                 <label for="name">Text Input:</label>
-                 <input type="text" name="name" id="name" value=""  />
-                </div>
+				<div data-role="fieldcontain">
+				 <label for="name">Text Input:</label>
+				 <input type="text" name="name" id="name" value=""  />
+				</div>
 
-                <div data-role="fieldcontain">
-                <label for="textarea">Textarea:</label>
-                <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-                </div>
+				<div data-role="fieldcontain">
+				<label for="textarea">Textarea:</label>
+				<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+				</div>
 
-                <div data-role="fieldcontain">
-                    <label for="slider2">Flip switch:</label>
-                    <select name="slider2" id="slider2" data-role="slider">
-                        <option value="off">Off</option>
-                        <option value="on">On</option>
-                    </select>
-                </div>
+				<div data-role="fieldcontain">
+					<label for="slider2">Flip switch:</label>
+					<select name="slider2" id="slider2" data-role="slider">
+						<option value="off">Off</option>
+						<option value="on">On</option>
+					</select>
+				</div>
 
-                <div data-role="fieldcontain">
-                    <label for="slider">Slider:</label>
-                    <input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true" />
-                </div>
+				<div data-role="fieldcontain">
+					<label for="slider">Slider:</label>
+					<input type="range" name="slider" id="slider" value="0" min="0" max="100" data-highlight="true" />
+				</div>
 
-            </form>
+			</form>
 
-    </div><!-- /content -->
+	</div><!-- /content -->
 
-    <div data-role="footer"  data-position="fixed">
-         <div data-role="navbar">
-            <ul>
-                <li><a href="#escribirMsj" data-icon="edit">New</a></li>
-                <li><a href="#playa" data-icon="mail" data-transition="fade" data-direction="reverse">In Box</a></li>
-                <li><a href="#" data-icon="gear"  class="ui-btn-active">Setup</a></li>
-            </ul>
-        </div><!-- /navbar -->
-    </div><!-- /footer -->
+	<div data-role="footer"  data-position="fixed">
+		 <div data-role="navbar">
+			<ul>
+				<li><a href="#escribirMsj" data-icon="edit">New</a></li>
+				<li><a href="#playa" data-icon="mail" data-transition="fade" data-direction="reverse">In Box</a></li>
+				<li><a href="#" data-icon="gear"  class="ui-btn-active">Setup</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
 </div><!-- /page -->
 
 <script type="text/javascript">
-    var logueado = false;
-    var navegacion = '';
+	var logueado = false;
+	var navegacion = '';
 
-    $( "#popupLogin" ).popup();
+	$( "#popupLogin" ).popup();
 
-    $('#chkFirmar').on('click', function(){
+	$('#chkFirmar').on('click', function(){
 
-        if($("#chkFirmar").is(':checked')) {  
-            navegacion = 'escribirMsj';
-            $( "#popupLogin" ).popup("open");
-        } else {  
-            $('#textAreaMensaje').val('@anonymus');
-        } ;
-        
-    });
+		if($("#chkFirmar").is(':checked')) {  
+			navegacion = 'escribirMsj';
+			$( "#popupLogin" ).popup("open");
+		} else {  
+			$('#textAreaMensaje').val('@anonymus');
+		} ;
+		
+	});
 
-    function signIn(){
-        $( "#popupLogin" ).popup("close");
-        logueado = true;
-        //alert('cambiando area');
+	function signIn(){
+		$( "#popupLogin" ).popup("close");
+		logueado = true;
+		//alert('cambiando area');
 
-        switch(true){
-            case navegacion == 'escribirMsj':
-                $('#textAreaMensaje').val('@'+$('#user').val());
-                break;
-            case navegacion == 'revisarGaviotas':
-                revisarGaviotas();
-                break;
-            default:
-                alert('error');
-        }
+		switch(true){
+			case navegacion == 'escribirMsj':
+				$('#textAreaMensaje').val('@'+$('#user').val());
+				break;
+			case navegacion == 'revisarGaviotas':
+				revisarGaviotas();
+				break;
+			default:
+				alert('error');
+		}
 
-        $('#textAreaMensaje').val('@'+$('#user').val());
-        $("#chkFirmar").attr('checked', true);
-    }
+		$('#textAreaMensaje').val('@'+$('#user').val());
+		$("#chkFirmar").attr('checked', true);
+	}
 
-    function revisarGaviotas(){
-        if(logueado){
-            alert('no hay gaviotas en tu playa');
-            return;
-        }
+	function revisarGaviotas(){
+		if(logueado){
+			alert('no hay gaviotas en tu playa');
+			return;
+		}
 
-        navegacion = 'revisarGaviotas';
-        $( "#popupLogin" ).popup("open");
-    }
+		navegacion = 'revisarGaviotas';
+		$( "#popupLogin" ).popup("open");
+	}
+	function page(url){
+		$.mobile.changePage(url);
+	}
 </script>
 </body>
 </html>
