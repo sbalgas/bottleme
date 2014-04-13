@@ -18,7 +18,16 @@
 
 .wave {
 	position: absolute;
-	bottom: -5px;
+	bottom: 0px;
+    background-size: 100% 100%;
+    z-index: 0;
+    width: 100%;
+}
+.bg_wave_mini{
+    background-image: url('../img/bg_wave_mini.png');
+}
+.bg_wave{
+    background-image: url('../img/bg_wave.png');
 }
 .palme {
 	width: 60%;
@@ -98,7 +107,9 @@
 
 .formulario{
 	width: 80%;
-	margin: 50px auto;
+	margin: 20px auto;
+    z-index: 1;
+    position: relative;
 }
 img.avatar {
     background: #ebf7ff;
