@@ -35,6 +35,11 @@
 	top: 0px;
 	right: 0px;
 }
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .palme {
+        display: none;
+    }
+}
 #inicio, #registro {
 	position: relative;
 	background: url('../img/bg.png') repeat-x;
@@ -110,6 +115,7 @@
 	margin: 20px auto;
     z-index: 1;
     position: relative;
+    display: table;
 }
 img.avatar {
     background: #ebf7ff;
@@ -122,11 +128,12 @@ img.avatar {
 }
 
 .formulario input.text{
-	margin: 0 10px;
+    display: block;
+	margin: 0;
 	background: transparent;
     color:#000000;
     border: 0;
-    width:90%;
+    width: 100%;
     overflow: auto;
     outline: none;
     -webkit-box-shadow: none;
@@ -143,18 +150,18 @@ img.avatar {
 	border-right:#079bcd 1px solid;
 }
 .inputs {
-	width: 77%;
+    display: table-cell;
 	height: 40px;
-	float: right;
 }
 .label{
-	width: 20%;
+	display: table-cell;
+    width: 100px;
 	height: 40px;
 	line-height:40px;
-	float: left;
 	text-align: end;
 }
-.table{
+.row{
+    display: table-row;
 	width: 100%;
 }
 

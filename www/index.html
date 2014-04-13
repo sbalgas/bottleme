@@ -28,6 +28,18 @@
 		<div onclick="page('#registro')" class="bregister">Registrarme</div>
 		<div class="blogin">Ingresar</div>
 	</div>
+
+	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+		<div style="padding:10px 20px;">
+			<h3>Sign in</h3>
+			<label for="user" class="ui-hidden-accessible">Username:</label>
+			<input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
+			<label for="pass" class="ui-hidden-accessible">Password:</label>
+			<input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
+			<button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
+		</div>
+	</div>
+
 </div>
 <div data-role="page" id="registro">
 	<div class="wave bg_wave_mini"></div>
@@ -40,15 +52,15 @@
 			</div>
 		</div>
 		<div class="cleaner_h20"></div>
-		<div class="table">
-			<div class="label">Nick:</div>
+		<div class="row">
+			<div class="label">Nick:<div style="float:right">@</div></div>
 			<div class="inputs">
-				&nbsp;@<input autocomplete="off" data-role="none" placeholder="Ingrese su nick" class="text" type="text" name="nick" id="nick" value="">
+				<input autocomplete="off" data-role="none" placeholder="Ingrese su nick" class="text" type="text" name="nick" id="nick" value="">
 				<div class="subinput"></div>
 			</div>
 		</div>
 		<div class="cleaner_h20"></div>
-		<div class="table">
+		<div class="row">
 			<div class="label">Email:</div>
 			<div class="inputs">
 				<input autocomplete="off" data-role="none" placeholder="Ingrese su email" class="text" type="text" name="email" id="email" value="">
@@ -56,23 +68,23 @@
 			</div>
 		</div>
 		<div class="cleaner_h20"></div>
-		<div class="table">
+		<div class="row">
 			<div class="label">Contrase&ntilde;a:</div>
 			<div class="inputs">
 				<input autocomplete="off" data-role="none" placeholder="Ingrese su contrase&ntilde;a" class="text" type="password" name="pass" id="pass" value="">
 				<div class="subinput"></div>
 			</div>
 		</div>
+	</div>
+	<div style="width:80%; margin:0 auto;">
 		<div class="cleaner_h20"></div>
-		<div class="inputs">
-			<input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true">
-	    	<label for="checkbox-mini-0">Acepto los términos y condiciones de uso.</label>
-	    </div>
-	    <div class="cleaner_h20"></div>
-	    <div align="center">
-		    <input type="button" data-inline="true" value="Aceptar">
-		    <input onclick="page('#inicio')" type="button" data-inline="true" value="Cancelar">
-	    </div>
+		<input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true">
+		<label for="checkbox-mini-0">Acepto los términos y condiciones de uso.</label>
+		<div class="cleaner_h20"></div>
+		<div align="center">
+			<input type="button" data-inline="true" value="Aceptar">
+			<input onclick="page('#inicio')" type="button" data-inline="true" value="Cancelar">
+		</div>
 	</div>
 </div>
 <div data-role="page" id="principal">
@@ -176,37 +188,6 @@
 		</div><!-- /navbar -->
 	</div><!-- /footer -->
 </div><!-- /page -->
-
- <div data-role="page" id="login">
-
-	<div data-role="header">
-		<h1>Wellcome</h1>
-		<a href="#"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text></a>
-	</div>/header
-
-	<div role="main" class="ui-content">
-	<div class="login"  >
-			<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a alingCenter" data-transition="pop">Sign in</a>
-	</div>
-	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-		<div style="padding:10px 20px;">
-			<h3>Sign in</h3>
-			<label for="user" class="ui-hidden-accessible">Username:</label>
-			<input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
-			<label for="pass" class="ui-hidden-accessible">Password:</label>
-			<input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
-			<button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
-		</div>
-	</div>
-
-	<div class="logoBottelme">
-		<p>BottleMe</p>
-	</div>
-
-	</div>/content
-
-	
-</div>
 
 <div data-role="page" id="setup">
 
