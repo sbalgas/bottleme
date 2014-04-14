@@ -26,17 +26,31 @@
 	
 	<div class="button_Login">
 		<div onclick="page('#registro')" class="bregister">Registrarme</div>
-		<div class="blogin">Ingresar</div>
+		<div class="blogin"><a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="none" data-transition="pop">Ingresar</a></div>
 	</div>
-
 	<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
 		<div style="padding:10px 20px;">
-			<h3>Sign in</h3>
-			<label for="user" class="ui-hidden-accessible">Username:</label>
-			<input type="text" name="user" id="user" value="" placeholder="username" data-theme="a">
-			<label for="pass" class="ui-hidden-accessible">Password:</label>
-			<input type="password" name="pass" id="pass" value="" placeholder="password" data-theme="a">
-			<button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="signIn();">Sign in</button>
+			<p><strong>Por favor, introdusca su usuario y contrase&ntilde;a para ingresar.</strong></p>
+			<p id="error_msj"></p>
+			<p id="alert_msj"></p>
+			<div class="formulario">
+				<div class="row">
+					<div class="label2">Usuario/Email:</div>
+					<div class="inputs">
+						<input autocomplete="off" data-role="none" placeholder="usuario" class="text" type="text" name="ur" id="ur" value="">
+						<div class="subinput"></div>
+					</div>
+				</div>
+				<div class="cleaner_h20"></div>
+				<div class="row">
+					<div class="label2">Contrase&ntilde;a:</div>
+					<div class="inputs">
+						<input autocomplete="off" data-role="none" placeholder="contrase&ntilde;a" class="text" type="password" name="pw" id="pw" value="">
+						<div class="subinput"></div>
+					</div>
+				</div>
+			</div>
+			<button class="ui-btn ui-corner-all ui-shadow ui-btn-c ui-btn-icon-left ui-icon-check" onclick="login();">Ingresar</button>
 		</div>
 	</div>
 
@@ -284,9 +298,6 @@
 
 		navegacion = 'revisarGaviotas';
 		$( "#popupLogin" ).popup("open");
-	}
-	function page(url){
-		$.mobile.changePage(url);
 	}
 </script>
 </body>
